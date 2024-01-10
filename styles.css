@@ -1,0 +1,10 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: 700px
+}
