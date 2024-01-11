@@ -1,12 +1,18 @@
 {
     "manifest_version": 3,
-    "name": "Cats Addon",
+    "name": "Cats",
     "version": "1.0",
   
     "description": "Displays an image of a cat when clicked on.",
     
     "action": {
       "default_popup": "popup.html"
-    }
+    },
   
+    "icons": {
+      "16": "icons/16w.png",
+      "32": "icons/32w.png",
+      "64": "icons/64w.png",
+      "128": "icons/128w.png"
+    }
   }

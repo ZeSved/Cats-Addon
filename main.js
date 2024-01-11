@@ -4,13 +4,13 @@ if (localStorage.getItem('previousCats') === null)
 getLink();
 
 async function getLink() {
-    fetch('https://api.thecatapi.com/v1/images/search')
+    fetch(Math.floor(Math.random() * 100) == 0 ? 'https://api.thedogapi.com/v1/images/search' : 'https://api.thecatapi.com/v1/images/search')
         .then((response) => {
             return response.json();
         })
         .then((json) => {
             document.getElementById('mainCat').src = json[0].url;
-            let cats = localStorage.getItem('previousCats').split(',');
+            const cats = localStorage.getItem('previousCats').split(',');
             while (cats.length > 10 || cats[0] === '') cats.pop();
             cats.unshift(json[0].url);
             localStorage.setItem('previousCats', cats);
@@ -26,6 +26,11 @@ function showPrevious() {
     for (let i = 1; i < images.length; i++) {
         let image = document.createElement('img');
         image.src = images[i];
+
+        image.addEventListener('click', (e) => {
+            window.open(e.target.src);
+        });
+
         previousDiv.appendChild(image);
     }
 }
@@ -46,3 +51,5 @@ function removeAllChildren(parent) {
         parent.removeChild(parent.firstChild);
     }
 }
+
+localStorage.getItem('jefhuie') ?? 'yes';
