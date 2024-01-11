@@ -1,10 +1,45 @@
-*,
-*::before,
-*::after {
+* {
     margin: 0;
 }
 
 img {
     display: block;
-    width: 700px
+}
+
+body {
+    width: 600px;
+    cursor: wait;
+}
+
+#mainCat {
+    width: 600px;
+    max-height:500px;
+    object-fit: cover;
+    cursor: pointer;
+    position: relative;
+}
+
+.previousContainer {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.previousContainer > img {
+    /*cursor: pointer;*/
+    filter: brightness(100%);
+    max-width: 150px;
+    height: inherit;
+    object-fit: cover;
+    position: relative;
+    /*transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.previousContainer > img:hover {
+    filter: brightness(70%);
+    transform: scale(1.3);
+}*/
 }
