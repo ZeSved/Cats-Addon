@@ -1,10 +1,10 @@
-if (localStorage.getItem('previousCats') === null) {
-	localStorage.setItem('previousCats', [])
+const CAT_ARRAY_KEY = 'previousCats'
+
+if (localStorage.getItem(CAT_ARRAY_KEY) === null) {
+	localStorage.setItem(CAT_ARRAY_KEY, [])
 }
 
 getLink()
-
-const CAT_ARRAY_KEY = 'previousCats'
 
 async function getLink() {
 	fetch(
